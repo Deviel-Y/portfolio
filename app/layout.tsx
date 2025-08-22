@@ -19,7 +19,12 @@ export default function RootLayout({
 }>) {
  return (
   <html lang="en">
-   <body className={`${roboto_serif.variable} antialiased`}>{children}</body>
+   <body
+    suppressHydrationWarning
+    className={`${roboto_serif.variable} antialiased`}
+   >
+    {children}
+   </body>
   </html>
  );
 }
