@@ -1,0 +1,25 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "./generated/client"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model FrontEnd_skill {
+  id   String @unique @default(uuid())
+  name String @unique
+}
+
+model BackEnd_skill {
+  id   String @unique @default(uuid())
+  name String @unique
+}
+
+model DevOps_skill {
+  id   String @unique @default(uuid())
+  name String @unique
+}
