@@ -1,11 +1,22 @@
-import Intuduction from "./components/Intuduction";
+import prisma from "@/prisma/client";
+import Intuduction from "./pageSections/Intuduction";
+import SkillList from "./pageSections/SkillList";
 
-const HomePage = () => {
+const HomePage = async () => {
+ const { skills } = await fetchData();
+
  return (
-  <div className="flex flex-row justify-center items-center">
+  <div className="w-full flex flex-col gap-20 justify-center items-center">
    <Intuduction />
+   <SkillList skills={skills} />
   </div>
  );
 };
 
 export default HomePage;
+
+const fetchData = async () => {
+ const [skills] = await Promise.all([prisma.skill.findMany()]);
+
+ return { skills };
+};

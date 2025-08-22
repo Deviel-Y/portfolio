@@ -1,17 +1,17 @@
-import SkillTags from "./SkillTags";
+import SkillTags from "../components/SkillTags";
 
 const Intuduction = () => {
  return (
-  <section className="flex flex-col gap-5 w-full h-screen justify-center items-center">
-   <p className="inline-block text-7xl font-bold bg-radial from-[#4A49D7] from-40% to-[#8734E1] bg-clip-text text-transparent">
+  <section className="flex flex-col gap-5 w-full justify-center items-center pt-10">
+   <p className="inline-block text-7xl font-bold bg-radial from-[#4A49D7] from-40% to-[#8734E1] bg-clip-text text-transparent py-1">
     Daniel Yadghar
    </p>
 
    <p className="text-4xl font-bold">Full Stack Web Developer</p>
 
-   <p className="text-gray-700 text-xl w-1/2 text-center ">
-    I craft end-to-end solutions with 8+ years of experience building scalable
-    applications and leading development teams.
+   <p className="text-gray-600 text-xl w-1/2 text-center px-10">
+    I craft end-to-end web solutions with years of experience building scalable
+    applications using modern frameworks and tools.
    </p>
 
    <div className="flex flex-row gap-3 justify-center items-center">

@@ -8,7 +8,7 @@ interface Props {
 const SkillTags = ({ children, textColor, backgroundColor }: Props) => {
  return (
   <div
-   className={`${textColor} ${backgroundColor} w-fit px-3 py-2 rounded-full`}
+   className={`${textColor} ${backgroundColor} w-fit px-3 py-2 rounded-full opacity-80`}
   >
    <p className="text-sm font-mono">{children}</p>
   </div>
