@@ -9,17 +9,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model FrontEnd_skill {
-  id   String @unique @default(uuid())
-  name String @unique
+model skill {
+  id        String     @unique @default(uuid())
+  name      String     @unique
+  skillType Skill_Type
 }
 
-model BackEnd_skill {
-  id   String @unique @default(uuid())
-  name String @unique
-}
-
-model DevOps_skill {
-  id   String @unique @default(uuid())
-  name String @unique
+enum Skill_Type {
+  FRONT_END
+  BACK_END
+  DEV_OPS
 }
