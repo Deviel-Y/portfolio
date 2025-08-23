@@ -1,11 +1,37 @@
+"use client";
+
+import { motion, MotionConfig } from "motion/react";
 import SkillTags from "../components/SkillTags";
 
 const Intuduction = () => {
  return (
-  <section className="flex flex-col gap-5 w-full justify-center items-center pt-10">
-   <p className="inline-block text-7xl font-bold bg-radial from-[#4A49D7] from-40% to-[#8734E1] bg-clip-text text-transparent py-1">
-    Daniel Yadghar
-   </p>
+  <motion.section
+   initial={{ opacity: 0, y: -30 }}
+   animate={{ opacity: 1, y: 0 }}
+   transition={{
+    type: "spring",
+    stiffness: 700,
+    damping: 25,
+   }}
+   className="flex flex-col gap-5 w-full justify-center items-center pt-10"
+  >
+   <div className="flex flex-row justify-center gap-10 items-center">
+    <MotionConfig transition={{ delay: 0.5, duration: 0.45, ease: "easeOut" }}>
+     <motion.p
+      initial={{ x: 40 }}
+      animate={{ x: 0 }}
+      className="inline-block text-7xl font-bold bg-radial from-[#4A49D7] from-40% to-[#8734E1] bg-clip-text text-transparent py-1"
+     >
+      Daniel Yadghar
+     </motion.p>
+
+     <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="w-20 h-20 rounded-full bg-blue-300 "
+     />
+    </MotionConfig>
+   </div>
 
    <p className="text-4xl font-bold">Full Stack Web Developer</p>
 
@@ -25,7 +51,7 @@ const Intuduction = () => {
      </SkillTags>
     ))}
    </div>
-  </section>
+  </motion.section>
  );
 };
 
